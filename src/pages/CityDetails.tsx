@@ -16,7 +16,7 @@ export default function CityDetails() {
         axios
             .get(`http://127.0.0.1:8000/api/city/${slug}`, {
                 headers: {
-                    "X_API_KEY": "qwerty123456",
+                    "X-API-KEY": "qwerty123456",
                 },
             })
             .then((response) => {
@@ -41,7 +41,7 @@ export default function CityDetails() {
         return <p>City not found</p>;
     }
 
-    const baseUrl = "http://127.0.0.1:8000/storage/";
+    const baseUrl = "http://127.0.0.1:8000/storage";
 
     return (
         <>
@@ -66,7 +66,7 @@ export default function CityDetails() {
                         className="absolute right-0 w-[calc(100%-((100%-1130px)/2)-305px)] h-[434px] rounded-bl-[40px] overflow-hidden"
                     >
                         <img
-                            src={`${baseUrl}${city.photo}`}
+                            src={`${baseUrl}/${city.photo}`}
                             className="w-full h-full object-cover"
                             alt="hero background"
                         />
