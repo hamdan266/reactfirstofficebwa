@@ -4,6 +4,7 @@ import { Office } from "../types/type";
 import { z } from "zod";
 import axios from "axios";
 import { bookingSchema } from "../types/validationBooking";
+import Navbar from "../components/Navbar";
 
 export default function BookOffice() {
 
@@ -151,6 +152,7 @@ export default function BookOffice() {
 
     return (
         <>
+            <Navbar />
             <div
                 id="Banner"
                 className="relative w-full h-[240px] flex items-center shrink-0 overflow-hidden -mb-[50px]"
@@ -357,14 +359,14 @@ export default function BookOffice() {
                             </div>
                             <div className="flex flex-col gap-[2px]">
                                 <div className="flex items-center gap-1">
-                                    <p className="font-semibold">FirstOffice Angga</p>
+                                    <p className="font-semibold">FirstOffice Hamdan</p>
                                     <img
                                         src="/assets/images/icons/verify.svg"
                                         className="w-[18px] h-[18px]"
                                         alt="icon"
                                     />
                                 </div>
-                                <p>8008129839</p>
+                                <p>3791520418 </p>
                             </div>
                         </div>
                         <div className="flex items-center gap-3">
@@ -377,7 +379,7 @@ export default function BookOffice() {
                             </div>
                             <div className="flex flex-col gap-[2px]">
                                 <div className="flex items-center gap-1">
-                                    <p className="font-semibold">FirstOffice Angga</p>
+                                    <p className="font-semibold">FirstOffice Hamdan</p>
                                     <img
                                         src="/assets/images/icons/verify.svg"
                                         className="w-[18px] h-[18px]"
