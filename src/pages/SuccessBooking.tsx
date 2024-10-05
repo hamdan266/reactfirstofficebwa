@@ -1,4 +1,5 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 export default function SuccessBooking() {
 
@@ -11,6 +12,7 @@ export default function SuccessBooking() {
 
     return (
         <>
+            <Navbar />
             <section className="flex flex-1 py-10">
                 <div className="flex flex-col w-[450px] m-auto rounded-[20px] border border-[#E0DEF7] p-[30px] gap-[30px] bg-white">
                     <div className="flex items-center gap-4">
@@ -65,12 +67,13 @@ export default function SuccessBooking() {
                         Pesanan Anda sedang kami proses, kami akan menginformasikan status Anda
                         melalui SMS
                     </p>
-                    <a
-                        href="view-booking-details.html"
-                        className="flex items-center justify-center w-full rounded-full p-[16px_26px] gap-3 bg-[#0D903A] font-bold text-[#F7F7FD]"
-                    >
-                        <span>View Booking Details</span>
-                    </a>
+                    <Link to={'/check-booking'}>
+                        <div
+                            className="flex items-center justify-center w-full rounded-full p-[16px_26px] gap-3 bg-[#0D903A] font-bold text-[#F7F7FD]"
+                        >
+                            <span>View Booking Details</span>
+                        </div>
+                    </Link>
                 </div>
             </section>
         </>
